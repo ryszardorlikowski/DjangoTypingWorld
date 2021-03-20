@@ -38,7 +38,7 @@ INSTALLED_APPS = [
 ]
 
 COSTUME_APP = [
-
+    'accounts',
 ]
 
 INSTALLED_APPS += COSTUME_APP
@@ -112,3 +112,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# MAIN USER MODEL
+AUTH_USER_MODEL = 'accounts.User'
