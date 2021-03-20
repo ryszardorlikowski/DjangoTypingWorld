@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
 COSTUME_APP = [
     'accounts',
+    'rest_framework',
 ]
 
 INSTALLED_APPS += COSTUME_APP
@@ -113,5 +114,12 @@ STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# MAIN USER MODEL
+# Main user model
 AUTH_USER_MODEL = 'accounts.User'
+
+# REST framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
