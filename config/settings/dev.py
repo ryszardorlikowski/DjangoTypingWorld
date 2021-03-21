@@ -24,3 +24,5 @@ MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware', ]
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+print(env.list('CORS_ALLOWED_ORIGINS'))
+CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS')

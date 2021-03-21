@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 ]
 
 COSTUME_APP = [
+    'corsheaders',
     'accounts',
     'rest_framework',
 ]
@@ -45,6 +46,7 @@ COSTUME_APP = [
 INSTALLED_APPS += COSTUME_APP
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -123,3 +125,5 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
+
+
