@@ -39,8 +39,9 @@ INSTALLED_APPS = [
 
 COSTUME_APP = [
     'corsheaders',
-    'accounts',
     'rest_framework',
+    'accounts',
+    'lessons',
 ]
 
 INSTALLED_APPS += COSTUME_APP
